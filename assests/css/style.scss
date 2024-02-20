@@ -1,0 +1,860 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+@font-face {
+    font-family: 'Futura';
+    src: url('../fonts/futura/futur.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PUBG Sans';
+    src: url('../fonts/pubg/PUBG\ SANS.ttf') format('truetype');
+    /* Adjust the path as per your file structure */
+    font-weight: bold;
+    font-style: normal;
+}
+
+$light : #fff;
+$primary: #F20808;
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $primary;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 60%;
+}
+
+.col-5 {
+    width: 40%;
+}
+
+.opacity-gradient {
+    object-fit: cover;
+    z-index: -1; 
+    mask-image: linear-gradient(to top, rgba(0,0,0,0.01) 2%, black); /* Use a linear gradient mask */
+  }
+
+#toggleNavbar{
+    display: none;
+}
+
+.btn1 {
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 1px solid $primary;
+    color: $light;
+
+    &:hover {
+        background-color: $primary;
+    }
+}
+
+
+body {
+    width: 100%;
+    height: auto;
+    background: url('../images/main_bg.jpg') top no-repeat;
+    background-size: cover;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+#navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Initially transparent */
+    padding: 10px 20px;
+    text-align: center;
+    color: #fff;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    z-index: 1000;
+  }
+  
+  #navbar.sticky {
+    position: fixed;
+    background-color: #000; /* Black background when sticky */
+  }
+
+  #Navbar ul li a.active {
+    color: $primary; /* Change color as per your preference */
+}
+
+.navbar {
+    .nav_row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            img {
+                height: 50px;
+            }
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            ul {
+                padding: 0;
+                margin: 0;
+
+                li {
+                    display: inline;
+                    padding: 0 10px;
+
+                    a {
+                        color: $light;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .navbtn {
+                button {
+                    background-color: transparent;
+                    outline: none;
+                    border: none;
+                    cursor: pointer;
+
+                    .fa-solid {
+                        font-size: 25px;
+                        color: $light;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero_sec {
+    width: 100%;
+    height: 100vh;
+    background: url('../images/hero_bg.jpg') center no-repeat;
+    background-size: cover;
+    text-align: center;
+    overflow: hidden;
+    .title_img {
+
+        img {
+            width: 70%;
+        }
+    }
+
+    .release_date_img {
+        img {
+            width: 50%;
+        }
+    }
+
+    .hero_red_cutout {
+        img {
+            width: 73.6%;
+        }
+    }
+}
+
+.fan_army_sec {
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.3170518207282913) 50%, rgba(0, 0, 0, 1) 100%);
+
+    .fan_army_row {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .col-3 {
+            width: 30%;
+        }
+
+        .col-7 {
+            width: 70%;
+        }
+
+        .salaar_army {
+            text-align: center;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .army_list {
+            padding: 20px 40px;
+
+            ul {
+                padding: 0;
+                margin: 0;
+
+                li {
+                    color: $light;
+                    font-size: 22px;
+                    display: flex;
+                    gap: 2px;
+                    list-style: none;
+                    letter-spacing: 2px;
+                    padding: 5px 0;
+                    text-transform: uppercase;
+                    font-family: 'PUBG Sans';
+
+                    span {
+                        color: $primary;
+                        font-family: 'Futura', sans-serif !important;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .army_btn {
+                padding: 20px 0;
+                display: flex;
+                gap: 20px;
+            }
+        }
+    }
+}
+
+.about_salaar_sec {
+    width: 100%;
+    height: auto;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.3170518207282913) 50%, rgba(0, 0, 0, 1) 100%);
+
+    .about_row {
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .col-6 {
+        width: 50%;
+
+        .about_salaar_img {
+            text-align: center;
+
+            img {
+                width: 65%;
+                z-index: 99 !important;
+            }
+        }
+    }
+
+    .about_salaar_content {
+        padding: 50px;
+
+        p {
+            text-transform: uppercase;
+            font-size: 30px;
+            text-align: justify;
+            line-height: 40px;
+            color: $light;
+            font-family: 'PUBG Sans';
+
+            span {
+                color: $primary;
+            }
+        }
+    }
+
+    .release_date_col {
+        display: block;
+        padding: 15px 0;
+        text-align: center;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(53, 53, 53, 1) 100%);
+        z-index: 9999 !important;
+        width: 100%;
+        margin-top: -30px;
+
+        h3 {
+            font-family: 'PUBG Sans';
+            font-size: 40px;
+            letter-spacing: 10px;
+            color: #8C8C8C;
+        }
+    }
+}
+
+.cast_sec {
+    width: 100%;
+    height: auto;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.705) 0%, rgba(0, 0, 0, 0.774) 50%, rgba(0, 0, 0, 0.667) 100%);
+    padding: 50px 0 80px 0;
+
+    .cast_row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    h3 {
+        font-size: 25px;
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        position: relative;
+        font-family: 'PUBG Sans';
+        letter-spacing: 2px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 25px;
+            background-color: $primary;
+            left: -15px;
+            top: 3px;
+        }
+    }
+
+    .cast_box_row {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: -40px;
+            width: 100%;
+            height: 5px;
+            background-color: $light;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: -40px;
+            width: 51%;
+            height: 5px;
+            background-color: $primary;
+        }
+
+        .cast_box {
+            width: 22.5%;
+
+            img {
+                width: 100%;
+                box-shadow: 7px 7px 0px 0px rgba(242, 8, 8, 1);
+            }
+
+            h5 {
+                margin-top: 10px;
+                font-size: 13px;
+                text-align: center;
+                color: $light;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .most_voilent_img {
+        text-align: center;
+
+        img {
+            width: 85%;
+        }
+
+    }
+
+    .crew_container {
+        margin-top: 80px;
+    }
+}
+
+
+
+.update_sec {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.667) 0%, rgba(0, 0, 0, 0.774) 50%, rgba(0, 0, 0, 0.505) 100%);
+    width: 100%;
+    height: auto;
+    padding: 50px 0 50px 0;
+
+    h2 {
+        font-size: 35px;
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+        margin-left: 20px;
+        position: relative;
+        font-family: 'PUBG Sans';
+        letter-spacing: 2px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            height: 32px;
+            background-color: $primary;
+            left: -15px;
+            top: 3px;
+        }
+    }
+
+    .video_container {
+        width: 70%;
+        margin: 0 auto;
+        background-color: #272727;
+        padding: 0;
+        border-bottom: 3px solid $primary;
+        border-radius: 10px;
+
+        iframe{
+            height: 450px;
+        }
+    }
+}
+
+.coming_soon_sec {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.505) 0%, rgba(0, 0, 0, 0.774) 50%, rgba(0, 0, 0, 0.505) 100%);
+    width: 100%;
+    height: auto;
+    padding: 50px 0 50px 0;
+
+    .coming_soon_row {
+        display: flex;
+        align-items: center;
+
+        .cutout {
+            text-align: center;
+
+            img {
+                width: 60%;
+            }
+        }
+
+        .coming_soon_img {
+            img {
+                width: 80%;
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.205) 0%, rgba(0, 0, 0, 0.774) 50%, rgba(0, 0, 0, 0.505) 100%);
+    margin-top: -130px;
+    position: relative;
+    z-index: 9999999999 !important;
+
+    .footer_col {
+        .footer_logo {
+            text-align: center;
+            margin: 0 auto;
+
+            img {
+                height: 80px;
+            }
+        }
+
+        .social_media {
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            a {
+                img {
+                    height: 40px;
+                }
+            }
+        }
+
+        .footer_links {
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+
+                li {
+                    a {
+                        color: $light;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#Navbar.show-navbar {
+    display: block; 
+}
+
+.mobile_logo{
+    display: none;
+}
+
+@media screen and (max-width:1100px) {
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .hero_sec {
+        height: auto;
+        overflow-x: hidden;
+
+        .hero_red_cutout img {
+            width: 60%;
+        }
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+    #toggleNavbar{
+        display: block;
+        text-align: left;
+    }
+
+    .mobile_logo{
+        display: block;
+        text-align: left;
+        img{
+            height: 50px;
+        }
+    }
+
+    .container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .col-6 {
+        width: 100% !important;
+    }
+
+    .col-7 {
+        width: 100% !important;
+    }
+
+    .col-5 {
+        width: 100% !important;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .hero_sec {
+        text-align: center;
+        height: auto;
+        padding: 0 0 50px 0;
+        .hero_cut {
+            order: calc(-1);
+        }
+
+        .title_img{
+            margin-top: -250px;
+            img {
+                width: 80%;
+                margin-bottom: 20px;
+    
+            }
+        } 
+
+        .release_date_img img {
+            width: auto;
+            width: 80%;
+        }
+
+        .hero_red_cutout img {
+            width: auto;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+      .about_salaar_img img{
+        width: 100% !important;
+
+      }
+
+    .fan_army_sec {
+        height: auto;
+        width: 100%;
+        padding: 50px 20px;
+
+        .fan_army_row {
+            height: auto;
+            flex-wrap: wrap;
+
+            .salaar_army {
+                img {
+                    width: 80%;
+                }
+            }
+
+            .col-3 {
+                width: 100% !important;
+            }
+
+            .col-7 {
+                width: 100% !important;
+            }
+
+            .army_list {
+                padding: 10px 0;
+
+                ul {
+                    li {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+
+    .about_salaar_sec {
+        height: auto;
+
+        .about_row {
+            height: auto;
+            flex-wrap: wrap;
+        }
+
+        .about_salaar_content {
+            padding: 20px 10px;
+            margin-top: -250px;
+
+            p {
+                font-size: 25px;
+            }
+        }
+
+        .release_date_col {
+            margin-top: 30px;
+
+            h3 {
+                font-family: "PUBG Sans";
+                font-size: 16px;
+                letter-spacing: 5px;
+                color: #8C8C8C;
+                padding: 10px 20px;
+            }
+        }
+    }
+
+    .cast_sec {
+        .cast_row {
+            flex-wrap: wrap;
+
+            .cast_box_row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    .update_sec {
+        .video_container{
+            width: 90%;
+            iframe{
+                height: auto;
+            }
+        }    
+    }
+
+    .coming_soon_sec {
+        display: none;
+
+        .coming_soon_row {
+            flex-wrap: wrap;
+        }
+    }
+
+    .most_voilent_col {
+        order: calc(-1);
+        padding-bottom: 40px;
+    }
+
+    .cast_sec {
+        padding: 50px 20px;
+
+        .cast_box_row {
+            padding: 10px 0px;
+
+            .cast_box {
+                width: 45%;
+                margin-bottom: 20px;
+                h5{
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+
+    .cast_box_row {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        position: relative;
+
+        &::before {
+            width: 98%;
+            left: 0;
+        }
+
+        &::after {
+            width: 50%;
+            left: 0;
+
+        }
+
+    }
+
+    footer {
+        margin-top: 30px;
+        padding: 20px 20px;
+
+        .footer_col .footer_links ul {
+            flex-wrap: wrap;
+            gap: 10px;
+            li{
+                font-size: 16px;
+            }
+        }
+    }
+
+    
+    #Navbar {
+        display: block;
+        background-color: #000;
+        color: #fff;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: -250px; /* Initially off-screen */
+        width: 250px;
+        height: 100%;
+        transition: left 0.3s ease; /* Transition effect for smooth animation */
+        ul{
+            li{
+                display: block;
+                padding: 10px 0;
+                text-align: left;
+            }
+        }
+    }
+
+    #Navbar.show-navbar {
+        display: block; 
+        left: 0;
+    }
+    
+
+}
+
+
+@media screen and (max-width:450px) {
+
+
+
+    .army_btn{
+        a{
+            padding: 10px 10px;
+        }
+    }
+    .fan_army_sec .fan_army_row .army_list ul li {
+        font-size: 16px;
+    }
+    
+    .about_salaar_sec {
+        .about_salaar_content {
+            p {
+                font-size: 20px;
+            }
+        }
+
+        .release_date_col {
+            h3 {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .cast_sec {
+        .cast_box_row {
+            .cast_box {
+                h5{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    footer {
+        .footer_col .footer_links ul {
+            li{
+                font-size: 12px;
+            }
+        }
+    }
+
+
+}
